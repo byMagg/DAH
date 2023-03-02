@@ -1,8 +1,8 @@
 ACTIVIDAD 1 - TODO
 
-- [ ] El inicio de la aplicación muestra tres pestañas. La que se abre por defecto es la segunda.
+- [x] El inicio de la aplicación muestra tres pestañas. La que se abre por defecto es la segunda.
 
-- [ ] Las pestañas deben referirse a:
+- [x] Las pestañas deben referirse a:
 
     - Clients
 

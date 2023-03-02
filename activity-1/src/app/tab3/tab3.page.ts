@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  title: string = "Products"
+  constructor() { }
 
 }
