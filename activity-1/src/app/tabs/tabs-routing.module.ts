@@ -9,6 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'tab1',
+        data: { title: "Clients" },
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
       {

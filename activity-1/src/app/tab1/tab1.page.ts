@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { TabsPage } from '../tabs/tabs.page';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  title: string = "Clients"
+  title: string = "Clients";
   constructor() { }
 
 }
