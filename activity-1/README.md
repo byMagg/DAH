@@ -16,9 +16,9 @@ ACTIVIDAD 1 - TODO
 
 - [x] Los botones de las tres pestañas deben aparecer exactamente a la misma altura en la mitad del componente y centrados.
 
-- [ ] Las tres nuevas páginas a las que se accede, tienen similares características:
+- [x] Las tres nuevas páginas a las que se accede, tienen similares características:
 
-    - [ ] Muestran un listado de elementos de ejemplo (clientes, reservas y productos, respectivamente).
+    - [x] Muestran un listado de elementos de ejemplo (clientes, reservas y productos, respectivamente).
 
     - [x] Tienen un botón para navegar hacia atrás (cada una debe volver a su pestaña)
 
