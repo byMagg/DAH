@@ -8,5 +8,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-button (click)="goToNewPageNavCtrl()">Edit client</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let element of elements">
+      <ion-label class="element-label">{{element.id}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="goToNewPageNavCtrl()">
+    <ion-icon slot="start" name="create-outline"></ion-icon>
+    Edit client</ion-button>
 </ion-content>
