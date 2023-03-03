@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -10,8 +10,9 @@ export class ClientsPagePage implements OnInit {
 
   buttonPath = "/tabs/tab1/clients-page/edit-client-page"
   elements: any[] = [
-    { "id": "EL1", "name": "Element 1", "description": "Desc. of EL1" },
-    { "id": "EL2", "name": "Element 2", "description": "Desc. of EL2" }
+    { "id": "1", "name": "Pedro Picapiedra", "description": "Con 24,3 MP, el sensor Exmor de fotograma completo y 35 mm de la α7 es equiparable al de las principales réflex. Y con el último procesador BIONZ X de Sony y un enfoque automático avanzado, la α7 ofrece una calidad, sensibilidad y nivel de detalle extraordinarios. Prepárate para un rendimiento que llevará tu fotografía a un nuevo nivel" },
+    { "id": "2", "name": "Antonio Orozco", "description": "Nuestro Echo Dot con mejor calidad de sonido hasta la fecha: disfruta de un audio mejorado respecto al anterior Echo Dot con Alexa, con un sonido potente en cualquier habitación, con voces más nítidas y graves más intensos" },
+    { "id": "3", "name": "Julián Álvarez", "description": "Nuestro Echo Dot con mejor calidad de sonido hasta la fecha: disfruta de un audio mejorado respecto al anterior Echo Dot con Alexa, con un sonido potente en cualquier habitación, con voces más nítidas y graves más intensos" },
   ]
 
   constructor(public navCtrl: NavController) { }
