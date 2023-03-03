@@ -10,7 +10,7 @@ ACTIVIDAD 1 - TODO
 
     - Products
 
-- [ ] Los iconos de acceso a cada pestaña deben corresponderse con el tipo de información (clientes, productos y reservas).
+- [x] Los iconos de acceso a cada pestaña deben corresponderse con el tipo de información (clientes, productos y reservas).
 
 - [ ] El contenido de cada pestaña debe tener un botón que abra una nueva página.
 
