@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
   constructor(private newService: NewserviceService) { }
 
   ngOnInit() {
-    this.newService.searchMovie("Ant Man");
+    this.results = this.newService.searchMovie("Ant Man");
   }
 
 }
