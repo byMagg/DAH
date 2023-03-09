@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { NewserviceService } from '../services/newservice.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +11,10 @@ export class HomePage implements OnInit {
 
   results: Observable<any> | undefined;
 
-  constructor(private newService: NewserviceService) { }
+  constructor(public newService: NewserviceService) { }
 
   ngOnInit() {
-    this.results = this.newService.searchMovie("Ant Man");
+    this.results = this.newService.searchMovie("Jurassic Park");
   }
 
 }
