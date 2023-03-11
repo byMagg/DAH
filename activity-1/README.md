@@ -27,3 +27,5 @@ ACTIVIDAD 1 - TODO
     - [x] Volver atrás
 
     - [x] Ir al inicio de la aplicación
+
+    - [ ] Añadir el botón a cada cliente
