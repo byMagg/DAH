@@ -1,6 +1,6 @@
 #  Actividad 2 - TODOS
 
-- [ ] El inicio de la aplicación muestra una página con un campo para introducir una cadena de texto y un botón para iniciar una búsqueda.
+- [x] El inicio de la aplicación muestra una página con un campo para introducir una cadena de texto y un botón para iniciar una búsqueda.
 
 - [ ] Al pulsar el botón, se accederá a una nueva página que mostrará una lista de películas (haciendo uso de OMDb API) cuyo título contenga la cadena de texto introducida.
 
