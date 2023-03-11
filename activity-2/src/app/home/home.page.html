@@ -14,6 +14,10 @@
   </ion-header>
 
   <div id="container">
+    <ion-item>
+      <ion-label position="floating">Default input</ion-label>
+      <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged()" placeholder="Enter text"></ion-searchbar>
+    </ion-item>
 
     <ion-label>Resultados:</ion-label>
 

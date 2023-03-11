@@ -7,14 +7,15 @@ import { Observable } from 'rxjs';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
 
+  searchTerm: string = '';
   results: Observable<any> | undefined;
 
   constructor(public newService: NewserviceService) { }
 
-  ngOnInit() {
-    this.results = this.newService.searchMovie("Jurassic Park");
+  searchChanged() {
+    this.results = this.newService.searchMovie(this.searchTerm);
   }
 
 }
