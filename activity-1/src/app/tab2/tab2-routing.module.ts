@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },
+  {
+    path: 'reservations-page',
+    loadChildren: () => import('./reservations-page/reservations-page.module').then( m => m.ReservationsPagePageModule)
   }
 ];
 
