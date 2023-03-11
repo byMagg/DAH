@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -11,6 +10,11 @@
 #container strong {
   font-size: 20px;
   line-height: 26px;
+}
+
+#searchBar ion-item {
+  width: 500px;
+  margin: 0 auto;
 }
 
 #container p {
