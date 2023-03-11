@@ -1,4 +1,4 @@
-Actividad 2 - TODOS
+#  Actividad 2 - TODOS
 
 - [ ] El inicio de la aplicación muestra una página con un campo para introducir una cadena de texto y un botón para iniciar una búsqueda.
 
