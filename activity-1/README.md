@@ -28,4 +28,4 @@ ACTIVIDAD 1 - TODO
 
     - [x] Ir al inicio de la aplicación
 
-    - [ ] Añadir el botón a cada cliente
+    - [x] Añadir el botón a cada cliente
