@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-client-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditClientPagePage implements OnInit {
 
-  constructor() { }
+  element: any
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    const routerState = this.router.getCurrentNavigation()?.extras.state;
+    console.log(routerState);
+    this.element = routerState;
   }
 
 }

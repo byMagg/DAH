@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -17,8 +18,16 @@ export class ClientsPagePage implements OnInit {
 
   constructor(public navCtrl: NavController) { }
 
-  goToNewPageNavCtrl() {
-    this.navCtrl.navigateForward(this.buttonPath);
+  goToNewPageNavCtrl(id: number) {
+    const actualElement = this.elements[id - 1];
+    const navigationExtras: NavigationExtras = {
+      state: {
+        id: actualElement["id"],
+        name: actualElement["name"],
+        description: actualElement["description"],
+      }
+    }
+    this.navCtrl.navigateForward(this.buttonPath, navigationExtras);
   }
   ngOnInit() {
   }

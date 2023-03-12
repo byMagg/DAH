@@ -16,9 +16,12 @@
       <ion-col>
         <ion-label class="element-label ion-text-wrap ">{{element.description}}</ion-label>
       </ion-col>
+      <ion-col size="1">
+        <ion-button (click)="goToNewPageNavCtrl(element.id)">
+          <ion-icon slot="start" name="create-outline"></ion-icon>
+          Edit client
+        </ion-button>
+      </ion-col>
     </ion-item>
   </ion-list>
-  <ion-button (click)="goToNewPageNavCtrl()">
-    <ion-icon slot="start" name="create-outline"></ion-icon>
-    Edit client</ion-button>
 </ion-content>
