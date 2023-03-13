@@ -4,5 +4,26 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true,
+			"**/.browserslistrc": true,
+			"**/.editorconfig": true,
+			"**/.eslintrc.json": true,
+			"**/capacitor.config.ts": true,
+			"**/ionic.config.json": true,
+			"**/karma.conf.js": true,
+			"**/tsconfig.app.json": true,
+			"**/tsconfig.json": true,
+			"**/tsconfig.spec.json": true,
+			"**/.angular": true,
+			"**/.vscode": true
+		},
+		"explorerExclude.backup": {}
+	}
 }
