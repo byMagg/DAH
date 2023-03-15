@@ -7,7 +7,8 @@
 <ion-content>
   <div id="container">
     <ion-list>
-      <ion-item button *ngFor="let item of (results | async)" [routerLink]="['movie']">
+      <ion-item button *ngFor="let item of (results | async)" [routerLink]="['movie']" [queryParams]="{id: item.imdbID}"
+        [state]="{data: item}">
         <ion-label text-wrap>
           {{ item.Title }} ({{ item.Year }})
         </ion-label>

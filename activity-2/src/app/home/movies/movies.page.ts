@@ -12,6 +12,7 @@ export class MoviesPage implements OnInit {
 
   searchTerm: string = '';
   results: Observable<any> | undefined;
+  movie: any[] | undefined
 
 
   constructor(public newService: NewserviceService, public router: Router) {
