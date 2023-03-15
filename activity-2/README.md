@@ -2,7 +2,7 @@
 
 - [x] El inicio de la aplicación muestra una página con un campo para introducir una cadena de texto y un botón para iniciar una búsqueda.
 
-- [ ] Al pulsar el botón, se accederá a una nueva página que mostrará una lista de películas (haciendo uso de OMDb API) cuyo título contenga la cadena de texto introducida.
+- [x] Al pulsar el botón, se accederá a una nueva página que mostrará una lista de películas (haciendo uso de OMDb API) cuyo título contenga la cadena de texto introducida.
 
 - [ ] Al pulsar en un elemento de la lista, se debe acceder a una nueva página que muestra los detalles de dicha película.
 

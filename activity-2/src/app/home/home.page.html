@@ -14,21 +14,13 @@
   </ion-header>
   <div id="searchBar">
     <ion-item>
-      <ion-searchbar [(ngModel)]="searchTerm" (keyup.enter)="searchChanged()"
-        placeholder="Introduce el nombre de la película"></ion-searchbar>
-      <ion-button (click)="searchChanged()"><ion-icon slot="end" name="search"></ion-icon>
+      <ion-searchbar [(ngModel)]="searchTerm" placeholder="Introduce el nombre de la película"></ion-searchbar>
+      <ion-button [routerLink]="['/home/movies']" [state]="{input: searchTerm}"><ion-icon slot="end"
+          name="search"></ion-icon>
         Buscar
       </ion-button>
     </ion-item>
 
   </div>
-  <div id="container">
-    <ion-list>
-      <ion-item button *ngFor="let item of (results | async)">
-        <ion-label text-wrap>
-          {{ item.Title }} ({{ item.Year }})
-        </ion-label>
-      </ion-item>
-    </ion-list>
-  </div>
+
 </ion-content>

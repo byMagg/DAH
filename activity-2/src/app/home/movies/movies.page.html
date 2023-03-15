@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{searchTerm}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-list>
+      <ion-item button *ngFor="let item of (results | async)">
+        <ion-label text-wrap>
+          {{ item.Title }} ({{ item.Year }})
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

@@ -10,12 +10,7 @@ import { Observable } from 'rxjs';
 export class HomePage {
 
   searchTerm: string = '';
-  results: Observable<any> | undefined;
 
-  constructor(public newService: NewserviceService) { }
-
-  searchChanged() {
-    this.results = this.newService.searchMovie(this.searchTerm);
-  }
+  constructor() { }
 
 }
