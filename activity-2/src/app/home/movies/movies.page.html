@@ -7,7 +7,7 @@
 <ion-content>
   <div id="container">
     <ion-list>
-      <ion-item button *ngFor="let item of (results | async)">
+      <ion-item button *ngFor="let item of (results | async)" [routerLink]="['movie']">
         <ion-label text-wrap>
           {{ item.Title }} ({{ item.Year }})
         </ion-label>

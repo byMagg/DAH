@@ -14,17 +14,19 @@ export class MoviesPage implements OnInit {
   results: Observable<any> | undefined;
 
 
-  constructor(public newService: NewserviceService, public router: Router) { }
+  constructor(public newService: NewserviceService, public router: Router) {
+    const routerState = this.router.getCurrentNavigation()?.extras.state;
+    console.log(routerState);
+    this.searchTerm = routerState!["input"]
+    this.searchChanged()
+  }
 
   searchChanged() {
     this.results = this.newService.searchMovie(this.searchTerm);
   }
 
   ngOnInit() {
-    const routerState = this.router.getCurrentNavigation()?.extras.state;
-    console.log(routerState);
-    this.searchTerm = routerState!["input"]
-    this.searchChanged()
+
   }
 
 }
