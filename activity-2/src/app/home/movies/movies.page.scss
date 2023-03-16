@@ -1,3 +1,14 @@
 ion-card {
     width: 200px;
+    background: rgb(238, 246, 249);
+}
+
+#img-container {
+    height: 250px;
+    background: black;
+}
+
+#img-container ion-img {
+    height: 100%;
+    width: 100%;
 }
