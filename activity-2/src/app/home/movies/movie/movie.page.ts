@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
+import { MovieDetails } from 'src/app/models/MovieDetails';
 import { NewserviceService } from 'src/app/services/newservice.service';
 
 @Component({
@@ -10,15 +11,21 @@ import { NewserviceService } from 'src/app/services/newservice.service';
 })
 export class MoviePage implements OnInit {
 
-  movieId: string | undefined
-  details: Observable<any> | undefined;
+  movieId = "";
+  details: MovieDetails | undefined;
 
-  constructor(public newService: NewserviceService, public router: Router) {
-    this.fetchDetails()
+
+  constructor(public newService: NewserviceService, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      this.movieId = params['id'];
+      this.fetchDetails(this.movieId)
+    })
   }
 
-  fetchDetails() {
-    this.details = this.newService.searchMovieDetails(this.movieId!);
+  fetchDetails(movieId: string) {
+    return this.newService.searchMovieDetails(movieId).subscribe((movie: MovieDetails) => {
+      this.details = movie;
+    })
   }
 
   ngOnInit() {

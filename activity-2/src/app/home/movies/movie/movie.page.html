@@ -1,11 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{details}}</ion-title>
+    <ion-title *ngIf="details">{{details.Title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <p>
-    {{details}}
-  </p>
+
+  <div *ngIf="details">
+    <img src="{{details.Poster}}" alt="">
+    <p>Country: <span>{{ details.Country }}</span></p>
+  </div>
+
 </ion-content>

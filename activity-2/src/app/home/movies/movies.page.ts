@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
-import { MovieDetails } from 'src/app/models/ModelDetails';
+import { MovieDetails } from 'src/app/models/MovieDetails';
 import { NewserviceService } from 'src/app/services/newservice.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class MoviesPage implements OnInit {
 
   searchTerm: string = '';
   results: Observable<any> | undefined;
-  movie: MovieDetails | undefined
+  movie: string | undefined
 
   constructor(public newService: NewserviceService, public router: Router) {
     const routerState = this.router.getCurrentNavigation()?.extras.state;
