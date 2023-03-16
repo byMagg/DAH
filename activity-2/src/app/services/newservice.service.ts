@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MovieDetails } from '../models/MovieDetails';
+import { Movie } from '../models/Movie';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class NewserviceService {
 
   constructor(private http: HttpClient) { }
 
-  searchMovie(title: string): Observable<any> {
+  searchMovies(title: string): Observable<Movie[]> {
     return this.http.get(`${this.url}?s=${encodeURI(title)}&apikey=${this.apiKey}`).pipe(
       map((results: any) => results['Search'])
     );

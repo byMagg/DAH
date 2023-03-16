@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
-import { MovieDetails } from 'src/app/models/MovieDetails';
+import { Movie } from 'src/app/models/Movie';
 import { NewserviceService } from 'src/app/services/newservice.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { NewserviceService } from 'src/app/services/newservice.service';
 export class MoviesPage implements OnInit {
 
   searchTerm: string = '';
-  results: Observable<any> | undefined;
+  movies: Observable<Movie[]> | undefined;
   movie: string | undefined
 
   constructor(public newService: NewserviceService, public router: Router) {
@@ -23,7 +23,7 @@ export class MoviesPage implements OnInit {
   }
 
   searchChanged() {
-    this.results = this.newService.searchMovie(this.searchTerm);
+    this.movies = this.newService.searchMovies(this.searchTerm);
   }
 
   ngOnInit() {

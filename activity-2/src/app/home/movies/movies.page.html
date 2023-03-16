@@ -6,13 +6,16 @@
 
 <ion-content>
   <div id="container">
-    <ion-list>
-      <ion-item button *ngFor="let item of (results | async)" [routerLink]="['movie']" [queryParams]="{id: item.imdbID}"
-        [state]="{data: item}">
-        <ion-label text-wrap>
-          {{ item.Title }} ({{ item.Year }})
-        </ion-label>
-      </ion-item>
-    </ion-list>
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-card button *ngFor="let movie of (movies | async)" [routerLink]="['movie']"
+          [queryParams]="{id: movie.imdbID}" [state]="{data: movie}">
+          <ion-card-header><ion-img src="{{movie.Poster}}"></ion-img></ion-card-header>
+          <ion-card-title>{{movie.Title}}</ion-card-title>
+          <ion-card-content>{{movie.Title}}</ion-card-content>
+          <ion-card-subtitle>{{movie.Title}}</ion-card-subtitle>
+        </ion-card>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
