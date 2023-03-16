@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
+import { NewserviceService } from 'src/app/services/newservice.service';
 
 @Component({
   selector: 'app-movie',
@@ -7,22 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./movie.page.scss'],
 })
 export class MoviePage implements OnInit {
-  movie: string
 
+  movieId: string | undefined
+  details: Observable<any> | undefined;
 
-  constructor(public router: Router) {
-    const routerState = this.router.getCurrentNavigation()?.extras.state;
-    this.movie = routerState!["data"]
-    this.parseData(this.movie)
-    console.log(this.movie)
+  constructor(public newService: NewserviceService, public router: Router) {
+    this.fetchDetails()
   }
 
-  parseData(data: string) {
-    // console.log(data)
-    // console.log(typeof JSON.parse(data))
-    // console.log(data["title"])
+  fetchDetails() {
+    this.details = this.newService.searchMovieDetails(this.movieId!);
   }
-
 
   ngOnInit() {
   }

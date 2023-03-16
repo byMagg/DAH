@@ -18,4 +18,10 @@ export class NewserviceService {
       map((results: any) => results['Search'])
     );
   }
+
+  searchMovieDetails(id: string): Observable<any> {
+    return this.http.get(`${this.url}?i=${encodeURI(id)}&apikey=${this.apiKey}`).pipe(
+      map((results: any) => results['Search'])
+    );
+  }
 }
