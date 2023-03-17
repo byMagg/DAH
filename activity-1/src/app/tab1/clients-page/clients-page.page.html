@@ -10,7 +10,7 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let element of elements">
-      <ion-col size="1.5">
+      <ion-col size="2">
         <ion-title class="">{{element.name}}</ion-title>
       </ion-col>
       <ion-col>
@@ -24,4 +24,11 @@
       </ion-col>
     </ion-item>
   </ion-list>
+  <div id="home-button-container">
+    <ion-button [routerLink]="['/']">
+      <ion-icon name="home"></ion-icon>
+      GO HOME
+    </ion-button>
+  </div>
+
 </ion-content>
