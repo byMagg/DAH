@@ -8,7 +8,8 @@ import { Movie } from '../models/Movie';
 @Injectable({
   providedIn: 'root'
 })
-export class NewserviceService {
+
+export class MovieService {
 
   url = 'http://www.omdbapi.com/';
   apiKey = '95303372';

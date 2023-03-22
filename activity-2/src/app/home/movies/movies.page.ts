@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
 import { Movie } from 'src/app/models/Movie';
-import { NewserviceService } from 'src/app/services/newservice.service';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-movies',
@@ -15,15 +15,16 @@ export class MoviesPage implements OnInit {
   movies: Observable<Movie[]> | undefined;
   movie: string | undefined
 
-  constructor(public newService: NewserviceService, public router: Router) {
-    const routerState = this.router.getCurrentNavigation()?.extras.state;
-    console.log(routerState);
-    this.searchTerm = routerState!["input"]
-    this.searchChanged()
+  constructor(public movieService: MovieService, public route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      this.searchTerm = params['s'];
+      console.log(this.searchTerm)
+      this.searchChanged()
+    })
   }
 
   searchChanged() {
-    this.movies = this.newService.searchMovies(this.searchTerm);
+    this.movies = this.movieService.searchMovies(this.searchTerm);
   }
 
   ngOnInit() {

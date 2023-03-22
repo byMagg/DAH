@@ -14,8 +14,9 @@
   </ion-header>
   <div id="searchBar">
     <ion-item>
-      <ion-searchbar [(ngModel)]="searchTerm" placeholder="Introduce el nombre de la película"></ion-searchbar>
-      <ion-button [routerLink]="['movies']" [state]="{input: searchTerm}"><ion-icon slot="end" name="search"></ion-icon>
+      <ion-searchbar (keyup.enter)="search()" [(ngModel)]="searchTerm"
+        placeholder="Introduce el nombre de la película"></ion-searchbar>
+      <ion-button (click)="search()"><ion-icon slot="end" name="search"></ion-icon>
         Buscar
       </ion-button>
     </ion-item>
