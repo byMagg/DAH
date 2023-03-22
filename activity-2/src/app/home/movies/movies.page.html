@@ -11,7 +11,7 @@
   <div id="container">
     <ion-grid [fixed]="true">
       <ion-row>
-        <ion-card button *ngFor="let movie of (movies | async)" [routerLink]="[movie.imdbID]">
+        <ion-card button *ngFor="let movie of movies" [routerLink]="[movie.imdbID]">
           <ion-img src="{{movie.Poster}}"></ion-img>
           <div id="card-info">
             <p>{{movie.Title}}</p>

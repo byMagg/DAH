@@ -17,12 +17,12 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   searchMovies(title: string): Observable<Movie[]> {
-    return this.http.get(`${this.url}?s=${encodeURI(title)}&apikey=${this.apiKey}`).pipe(
+    return this.http.get<Movie[]>(`${this.url}?s=${encodeURI(title)}&apikey=${this.apiKey}`).pipe(
       map((results: any) => results['Search'])
     );
   }
 
-  searchMovieDetails(id: string) {
+  searchMovieDetails(id: string): Observable<MovieDetails> {
     return this.http.get<MovieDetails>(`${this.url}?i=${encodeURI(id)}&apikey=${this.apiKey}`);
   }
 

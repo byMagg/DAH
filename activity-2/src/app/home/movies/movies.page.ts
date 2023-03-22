@@ -12,7 +12,7 @@ import { MovieService } from 'src/app/services/movie.service';
 export class MoviesPage implements OnInit {
 
   searchTerm: string = '';
-  movies: Observable<Movie[]> | undefined;
+  movies: Movie[] | undefined;
   movie: string | undefined
 
   constructor(public movieService: MovieService, public route: ActivatedRoute) {
@@ -24,7 +24,9 @@ export class MoviesPage implements OnInit {
   }
 
   searchChanged() {
-    this.movies = this.movieService.searchMovies(this.searchTerm);
+    this.movieService.searchMovies(this.searchTerm).subscribe(movies => {
+      this.movies = movies;
+    })
   }
 
   ngOnInit() {
