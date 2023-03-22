@@ -8,9 +8,9 @@
 
 - [x] Se debe utilizar un único servicio con dos operaciones:
 
-        - [x] Una para obtener una lista de películas
+     - [x] Una para obtener una lista de películas
 
-        - [x] Otra para obtener los detalles de una película
+     - [x] Otra para obtener los detalles de una película
 
 - [ ] Se debe añadir un nuevo "property binding" que tenga sentido dentro del dominio de la aplicación propuesta.
 
