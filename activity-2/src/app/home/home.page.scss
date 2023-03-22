@@ -12,20 +12,15 @@
   line-height: 26px;
 }
 
-#searchBar ion-item {
+ion-content {
+  display: flex;
+  align-content: center;
+}
+
+#searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 500px;
   margin: 0 auto;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }

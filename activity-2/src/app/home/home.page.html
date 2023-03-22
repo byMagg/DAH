@@ -12,15 +12,14 @@
       <ion-title size="large">Búsqueda</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div id="searchBar">
-    <ion-item>
-      <ion-searchbar (keyup.enter)="search()" [(ngModel)]="searchTerm"
+  <div id="container">
+    <div id="searchBar">
+      <ion-searchbar mode="ios" animated="true" (keyup.enter)="search()" [(ngModel)]="searchTerm"
         placeholder="Introduce el nombre de la película"></ion-searchbar>
       <ion-button (click)="search()"><ion-icon slot="end" name="search"></ion-icon>
         Buscar
       </ion-button>
-    </ion-item>
-
+    </div>
   </div>
 
 </ion-content>

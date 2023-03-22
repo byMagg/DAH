@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ export class HomePage implements OnInit {
 
   searchTerm: string = '';
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private navCtrl: NavController, private route: ActivatedRoute) { }
 
   ngOnInit() {
 
@@ -21,8 +22,9 @@ export class HomePage implements OnInit {
       relativeTo: this.route,
       queryParams: { s: this.searchTerm },
 
+
     };
-    this.router.navigate(['movies'], navigationExtras);
+    this.navCtrl.navigateForward(['movies'], navigationExtras);
   }
 
 }

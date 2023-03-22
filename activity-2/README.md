@@ -14,7 +14,7 @@
 
 - [ ] Se debe añadir un nuevo "property binding" que tenga sentido dentro del dominio de la aplicación propuesta.
 
-- [ ] Se debe añadir un nuevo "event binding" que tenga sentido dentro del dominio de la aplicación propuesta.
+- [x] Se debe añadir un nuevo "event binding" que tenga sentido dentro del dominio de la aplicación propuesta.
 
 - [ ] Se debe añadir un nuevo "two-way binding" que tenga sentido dentro del dominio de la aplicación propuesta.
 
