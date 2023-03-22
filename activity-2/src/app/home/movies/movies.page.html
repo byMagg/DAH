@@ -12,11 +12,19 @@
     <ion-grid [fixed]="true">
       <ion-row>
         <ion-card button *ngFor="let movie of movies" [routerLink]="[movie.imdbID]">
-          <ion-img src="{{movie.Poster}}"></ion-img>
+          <div id="img-container">
+            <ion-img src="{{movie.Poster}}"></ion-img>
+          </div>
           <div id="card-info">
-            <p>{{movie.Title}}</p>
-            <p>{{movie.Year}}</p>
-            <p>{{movie.Type}}</p>
+            <div>
+              <p>{{movie.Title}}</p>
+            </div>
+            <div>
+              <p>{{movie.Year}}</p>
+            </div>
+            <div>
+              <p>{{movie.Type}}</p>
+            </div>
           </div>
         </ion-card>
       </ion-row>
