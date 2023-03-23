@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-button [routerLink]="['/login']">
+      <ion-icon slot="start" name="log-in"></ion-icon>
+      Login
+    </ion-button>
+    <ion-button [routerLink]="['/products']">
+      <ion-icon slot="start" name="bag-handle"></ion-icon>
+      Products
+    </ion-button>
+  </div>
+</ion-content>
