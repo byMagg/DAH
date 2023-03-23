@@ -24,3 +24,12 @@ ion-content {
   width: 500px;
   margin: 0 auto;
 }
+
+#terms-container {
+  width: min-content;
+  margin: 20px auto;
+}
+
+#terms-container>ion-label {
+  margin: 20px;
+}

@@ -10,7 +10,7 @@ import { NavController } from '@ionic/angular';
 export class HomePage implements OnInit {
 
   searchTerm: string = '';
-  @Input() checked: boolean = true;
+  @Input() checked: boolean = false;
 
   constructor(private navCtrl: NavController, private route: ActivatedRoute) { }
 
