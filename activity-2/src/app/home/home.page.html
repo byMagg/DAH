@@ -13,10 +13,14 @@
     </ion-toolbar>
   </ion-header>
   <div id="container">
+    <ion-item>
+      <ion-checkbox [checked]="checked" [(ngModel)]="checked"></ion-checkbox>
+      <ion-label>Acepta los términos de uso{{checked}}</ion-label>
+    </ion-item>
     <div id="searchBar">
-      <ion-searchbar mode="ios" animated="true" (keyup.enter)="search()" [(ngModel)]="searchTerm"
+      <ion-searchbar mode="ios" [disabled]="!checked" (keyup.enter)="search()" [(ngModel)]="searchTerm"
         placeholder="Introduce el nombre de la película"></ion-searchbar>
-      <ion-button (click)="search()"><ion-icon slot="end" name="search"></ion-icon>
+      <ion-button [disabled]="!checked" (click)="search()"><ion-icon slot="end" name="search"></ion-icon>
         Buscar
       </ion-button>
     </div>
