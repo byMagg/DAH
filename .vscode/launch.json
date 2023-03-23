@@ -9,7 +9,8 @@
             "request": "launch",
             "type": "chrome",
             "url": "http://localhost:8100",
-            "webRoot": "${workspaceFolder}/activity-2"
+            "webRoot": "${workspaceFolder}/activity-2",
+            // "preLaunchTask": "ionic serve"
         }
     ]
 }
