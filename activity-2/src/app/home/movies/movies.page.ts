@@ -17,7 +17,6 @@ export class MoviesPage implements OnInit {
   constructor(public movieService: MovieService, public route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
       this.searchTerm = params['s'];
-      console.log(this.searchTerm)
       this.searchChanged()
     })
   }

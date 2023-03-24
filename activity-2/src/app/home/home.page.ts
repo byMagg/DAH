@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -10,7 +10,7 @@ import { NavController } from '@ionic/angular';
 export class HomePage implements OnInit {
 
   searchTerm: string = '';
-  @Input() checked: boolean = false;
+  checked: boolean = false;
 
   constructor(private navCtrl: NavController, private route: ActivatedRoute) { }
 
