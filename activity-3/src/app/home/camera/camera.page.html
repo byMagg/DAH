@@ -17,20 +17,20 @@
   </ion-header>
 
   <div id="container">
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Coordinates</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>Latitude: {{ latitude }}</ion-item>
-        <ion-item>Longitude: {{ longitude }}</ion-item>
-        <ion-item>Accuracy: {{ accuracy }}</ion-item>
-      </ion-card-content>
-    </ion-card>
-
     <div id="photo-container">
-      <img alt="Photo" *ngIf="photo" [src]="photo" />
+      <div *ngIf="photo">
+        <img alt="Photo" [src]="photo" />
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Coordinates</ion-card-title>
+          </ion-card-header>
+          <ion-card-content *ngIf="coords">
+            <ion-item>Latitude: {{ coords.latitude }}</ion-item>
+            <ion-item>Longitude: {{ coords.longitude }}</ion-item>
+            <ion-item>Accuracy: {{ coords.accuracy }}</ion-item>
+          </ion-card-content>
+        </ion-card>
+      </div>
       <img *ngIf="!photo" src="assets/placeholder.png" />
     </div>
 

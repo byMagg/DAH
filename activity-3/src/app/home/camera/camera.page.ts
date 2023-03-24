@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Camera, CameraResultType } from '@capacitor/camera';
-import { Geolocation } from '@capacitor/geolocation';
+import { Coords } from 'src/models/Coords';
+import { GeolocationService } from './geolocation.service';
 
 @Component({
   selector: 'app-camera',
@@ -10,21 +11,16 @@ import { Geolocation } from '@capacitor/geolocation';
 })
 export class CameraPage implements OnInit {
 
-  latitude: number | undefined;
-  longitude: number | undefined;
-  accuracy: number | undefined;
+  coords: Coords | undefined
 
   photo: SafeResourceUrl | undefined;
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(private sanitizer: DomSanitizer, private geolocationService: GeolocationService) {
     this.getLocation();
   }
 
   async getLocation() {
-    const position = await Geolocation.getCurrentPosition();
-    this.latitude = position.coords.latitude;
-    this.longitude = position.coords.longitude;
-    this.accuracy = position.coords.accuracy;
+    this.coords = await this.geolocationService.getCoords()
   }
 
   async takePicture() {

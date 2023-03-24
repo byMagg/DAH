@@ -13,6 +13,14 @@
             // "preLaunchTask": "ionic serve"
         },
         {
+            "name": "Activity3 Debug",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8100",
+            "webRoot": "${workspaceFolder}/activity-3",
+            // "preLaunchTask": "ionic serve"
+        },
+        {
             "name": "Activity4 Debug",
             "request": "launch",
             "type": "chrome",
