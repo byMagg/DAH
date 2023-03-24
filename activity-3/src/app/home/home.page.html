@@ -1,5 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+
     <ion-title>
       Blank
     </ion-title>
@@ -12,27 +13,7 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Coordinates</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>Latitude: {{ latitude }}</ion-item>
-        <ion-item>Longitude: {{ longitude }}</ion-item>
-        <ion-item>Accuracy: {{ accuracy }}</ion-item>
-      </ion-card-content>
-    </ion-card>
-
-    <img alt="Photo" [src]="photo">
-
-    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-      <ion-fab-button (click)="takePicture()">
-        <ion-icon name="camera"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
-
-  </div>
+  <ion-button [routerLink]="['camera']" expand="block" fill="clear" shape="round">
+    Camera
+  </ion-button>
 </ion-content>

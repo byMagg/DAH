@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+  },
+  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
   }
 ];
 
