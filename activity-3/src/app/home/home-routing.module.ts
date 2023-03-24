@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'camera',
     loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
+  {
+    path: 'listing',
+    loadChildren: () => import('./listing/listing.module').then( m => m.ListingPageModule)
   }
 ];
 
