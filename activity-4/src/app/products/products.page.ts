@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service'; //
-import { LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Product } from '../models/Product';
+import { DbService } from '../services/db.service';
 
 @Component({
   selector: 'app-products',
@@ -10,13 +12,17 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProductsPage implements OnInit {
 
-  items: Array<any> | undefined;
+  items: Array<Product> | undefined;
+  handlerMessage = '';
+  roleMessage = '';
 
   constructor(
     public loadingCtrl: LoadingController,
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private dbService: DbService,
+    private alertController: AlertController
   ) { }
 
   ngOnInit() {
@@ -34,13 +40,42 @@ export class ProductsPage implements OnInit {
     this.route.data.subscribe(routeData => {
       routeData['data'].subscribe((data: any[] | undefined) => {
         loading.dismiss();
-        this.items = data;
+        this.items = data?.map<Product>((item) => {
+          const data = item.payload.doc.data()
+          return {
+            id: item.payload.doc.id,
+            name: data.name,
+            description: data.description,
+            image: data.image,
+          }
+        });
       })
     })
   }
 
   async presentLoading(loading: HTMLIonLoadingElement) {
     return await loading.present();
+  }
+
+  async deleteProduct(productId: string) {
+    const alert = await this.alertController.create({
+      header: '¿Seguro que desea eliminarlo?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+        },
+        {
+          text: 'Eliminar',
+          role: 'confirm',
+          handler: () => {
+            this.dbService.deleteProduct(productId);
+          },
+        },
+      ],
+    });
+
+    await alert.present();
   }
 
   logout() {

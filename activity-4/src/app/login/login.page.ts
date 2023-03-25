@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { FirebaseError } from 'firebase/app';
 
 @Component({
   selector: 'app-login',
@@ -47,9 +48,13 @@ export class LoginPage implements OnInit {
     this.authService.doLogin(value)
       .then(res => {
         this.router.navigate(["/products"]);
+        console.log(res)
       }, err => {
-        this.errorMessage = err.message;
-        console.log(err);
+        this.errorMessage = 'Error al autenticar'
+        if (err.code == "auth/wrong-password") this.errorMessage = "Contraseña incorrecta"
+        if (err.code == "auth/user-not-found") this.errorMessage = "Usuario no encontrado"
+
       })
+
   }
 }

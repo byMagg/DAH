@@ -16,6 +16,6 @@ También se debe modificar la aplicación para cumplir con las siguientes caract
 
 - [ ] El mensaje de salida cuando el usuario no existe en Firebase o cuando la contraseña no es correcta debe estar personalizado.
 
-- [ ] Se debe implementar la funcionalidad para ver los detalles de un artículo en la página products.
+- [x] Se debe implementar la funcionalidad para ver los detalles de un artículo en la página products.
 
-- [ ] Se debe implementar la funcionalidad para eliminar un artículo.
+- [x] Se debe implementar la funcionalidad para eliminar un artículo.
