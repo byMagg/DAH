@@ -39,7 +39,7 @@ export class AuthService {
       this.afAuth.signOut()
         .then(() => {
           localStorage.removeItem('user');
-          this.dbService.unsubscribeOnLogOut();
+          if (this.userData) this.dbService.unsubscribeOnLogOut();
           resolve();
         }).catch((error) => {
           console.log(error);

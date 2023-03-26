@@ -1,10 +1,13 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button [routerLink]="['/add-product']">
+      <ion-button [routerLink]="['/add-product']" *ngIf="displayOptions">
         <ion-icon slot="icon-only" name="add"></ion-icon>
       </ion-button>
-      <ion-button (click)="logout()">
+      <ion-button (click)="logout()" *ngIf="displayOptions">
         <ion-icon slot="icon-only" name="exit-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -20,8 +23,10 @@
           <img alt="" [src]="item.image">
         </ion-thumbnail>
         <ion-label>{{item.name}}</ion-label>
-        <ion-button fill="clear" slot="end" [routerLink]="['details', item.id]">Ver detalle</ion-button>
-        <ion-button fill="clear" (click)="deleteProduct(item.id)" slot="end">Eliminar</ion-button>
+        <ion-button fill="clear" slot="end" [routerLink]="['details', item.id]" *ngIf="displayOptions">Ver
+          detalle</ion-button>
+        <ion-button fill="clear" (click)="deleteProduct(item.id)" slot="end"
+          *ngIf="displayOptions">Eliminar</ion-button>
       </ion-item>
     </ion-list>
   </div>

@@ -15,19 +15,23 @@ export class ProductsPage implements OnInit {
   items: Array<Product> | undefined;
   handlerMessage = '';
   roleMessage = '';
+  displayOptions: boolean = false
 
   constructor(
     public loadingCtrl: LoadingController,
-    private authService: AuthService,
+    public authService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
     private dbService: DbService,
-    private alertController: AlertController
+    private alertController: AlertController,
   ) { }
 
   ngOnInit() {
     if (this.route && this.route.data) {
       this.getData();
+      if (localStorage.getItem("user") != null) {
+        this.displayOptions = !(JSON.parse(localStorage.getItem("user")!).uid == undefined);
+      }
     }
   }
 
