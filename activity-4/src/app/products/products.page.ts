@@ -29,9 +29,6 @@ export class ProductsPage implements OnInit {
   ngOnInit() {
     if (this.route && this.route.data) {
       this.getData();
-      if (localStorage.getItem("user") != null) {
-        this.displayOptions = !(JSON.parse(localStorage.getItem("user")!).uid == undefined);
-      }
     }
   }
 
@@ -72,6 +69,7 @@ export class ProductsPage implements OnInit {
         {
           text: 'Eliminar',
           role: 'confirm',
+          cssClass: 'alert-button-delete',
           handler: () => {
             this.dbService.deleteProduct(productId);
           },

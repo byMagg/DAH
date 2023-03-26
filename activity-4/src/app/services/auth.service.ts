@@ -8,6 +8,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class AuthService {
 
   userData: any;
+  logged: boolean = false
   constructor(
     public afs: AngularFirestore,
     private dbService: DbService,
@@ -22,6 +23,7 @@ export class AuthService {
         localStorage.setItem('user', '{}');
         JSON.parse(localStorage.getItem('user') || '{}');
       }
+      this.logged = this.userData != undefined
     });
   }
 
