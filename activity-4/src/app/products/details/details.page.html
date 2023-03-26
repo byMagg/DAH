@@ -1,12 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button defaultHref="/products"></ion-back-button>
     </ion-buttons>
-    <ion-title>details</ion-title>
+    <ion-title *ngIf="product">{{product.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div *ngIf="product">
+    <h1>{{product.name}}</h1>
+    <img alt="" [src]="product.image">
+  </div>
 </ion-content>

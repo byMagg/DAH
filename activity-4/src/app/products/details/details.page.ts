@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Product } from 'src/app/models/Product';
+import { DbService } from 'src/app/services/db.service';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPage implements OnInit {
 
-  constructor() { }
+  product: Product | undefined
+
+  constructor(
+    private dbService: DbService,
+    private route: ActivatedRoute,
+  ) {
+    this.route.params.subscribe(params => {
+      this.dbService.getProduct(params['id']).then((product) => {
+        this.product = product
+      })
+    })
+  }
 
   ngOnInit() {
+
   }
 
 }

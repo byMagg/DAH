@@ -8,11 +8,11 @@
 
 También se debe modificar la aplicación para cumplir con las siguientes características:
 
-- [ ] La página de inicio debe tener dos botones:
+- [x] La página de inicio debe tener dos botones:
 
     - [x] Un botón para acceder a la página de inicio de sesión.
 
-    - [ ] Otro botón para acceder a un listado de productos que están a la venta. Dicho listado de productos estarán asociados a un usuario específico. En este listado se mostrará la imagen, el nombre y la descripción, pero no existirá una opción para ver detalles del artículo. Desde la página de este listado no se podrán añadir nuevos productos.
+    - [x] Otro botón para acceder a un listado de productos que están a la venta. Dicho listado de productos estarán asociados a un usuario específico. En este listado se mostrará la imagen, el nombre y la descripción, pero no existirá una opción para ver detalles del artículo. Desde la página de este listado no se podrán añadir nuevos productos.
 
 - [x] El mensaje de salida cuando el usuario no existe en Firebase o cuando la contraseña no es correcta debe estar personalizado.
     HAY QUE MIRAR EL ERROR QUE SALE EN CONSOLA

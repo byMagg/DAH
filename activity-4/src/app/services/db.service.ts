@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import firebase from 'firebase/compat/app';
 import 'firebase/storage';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Product } from '../models/Product';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class DbService {
   ) { }
 
   getProducts() {
-    return new Promise<any>((resolve, reject) => {
+    return new Promise<Product[]>((resolve, reject) => {
       this.afAuth.user.subscribe(currentUser => {
         if (currentUser) {
           this.snapshotChangesSubscription = this.afs.collection('users').doc(currentUser.uid).collection('products').snapshotChanges();
@@ -31,7 +32,7 @@ export class DbService {
   }
 
   getProduct(productId: string) {
-    return new Promise<any>((resolve, reject) => {
+    return new Promise<Product>((resolve, reject) => {
       this.afAuth.user.subscribe(currentUser => {
         if (currentUser) {
           this.snapshotChangesSubscription = this.afs.doc<any>('users/' + currentUser.uid + '/products/' + productId).valueChanges()
