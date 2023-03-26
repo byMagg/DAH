@@ -22,6 +22,9 @@ export class DbService {
         if (currentUser) {
           this.snapshotChangesSubscription = this.afs.collection('users').doc(currentUser.uid).collection('products').snapshotChanges();
           resolve(this.snapshotChangesSubscription);
+        } else {
+          this.snapshotChangesSubscription = this.afs.collectionGroup('products').snapshotChanges();
+          resolve(this.snapshotChangesSubscription);
         }
       })
     })
