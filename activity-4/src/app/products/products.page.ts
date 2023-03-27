@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service'; //
 import { AlertController, LoadingController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Product } from '../models/Product';
+import { Product } from '../models/product.model';
 import { DbService } from '../services/db.service';
 
 @Component({
