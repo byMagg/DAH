@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { IonicModule, NavController } from '@ionic/angular';
+import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+
+@Component({
+  selector: 'app-tab1',
+  templateUrl: 'tab1.page.html',
+  styleUrls: ['tab1.page.scss'],
+  standalone: true,
+  imports: [IonicModule, ExploreContainerComponent],
+})
+export class Tab1Page {
+  title: string = "Clients";
+  buttonPath: string = "/tabs/tab1/clients-page"
+
+  constructor(public navCtrl: NavController) { }
+
+  goToNewPageNavCtrl() {
+    this.navCtrl.navigateForward(this.buttonPath);
+  }
+}
