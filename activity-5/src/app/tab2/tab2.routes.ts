@@ -8,6 +8,6 @@ export const routes: Routes = [
   },
   {
     path: 'reservations-page',
-    loadChildren: () => import('./reservations-page/reservations-page.page').then(m => m.ReservationsPagePage)
+    loadComponent: () => import('./reservations-page/reservations-page.page').then(m => m.ReservationsPagePage)
   }
 ];

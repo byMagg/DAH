@@ -9,6 +9,6 @@ export const routes: Routes = [
   },
   {
     path: 'edit-client-page',
-    loadChildren: () => import('./edit-client-page/edit-client-page.page').then(m => m.EditClientPagePage)
+    loadComponent: () => import('./edit-client-page/edit-client-page.page').then(m => m.EditClientPagePage)
   }
 ];

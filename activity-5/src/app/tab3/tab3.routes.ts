@@ -8,6 +8,6 @@ export const routes: Routes = [
   },
   {
     path: 'products-page',
-    loadChildren: () => import('./products-page/products-page.page').then(m => m.ProductsPagePage)
+    loadComponent: () => import('./products-page/products-page.page').then(m => m.ProductsPagePage)
   }
 ];
