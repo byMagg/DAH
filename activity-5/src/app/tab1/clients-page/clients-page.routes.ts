@@ -11,5 +11,21 @@ export const routes: Routes = [
     path: 'edit-client-page',
     loadComponent: () => import('./edit-client-page/edit-client-page.page').then(m => m.EditClientPagePage)
   },
+  {
+    path: 'edit-client-page',
+    loadComponent: () => import('./edit-client-page/edit-client-page.page').then( m => m.EditClientPagePage)
+  },
+  {
+    path: 'edit-client-page',
+    loadComponent: () => import('./edit-client-page/edit-client-page.page').then( m => m.EditClientPagePage)
+  },
+  {
+    path: 'edit-client-page',
+    loadComponent: () => import('./edit-client-page/edit-client-page.page').then( m => m.EditClientPagePage)
+  },
+  {
+    path: 'edit-client-page',
+    loadComponent: () => import('./edit-client-page/edit-client-page.page').then( m => m.EditClientPagePage)
+  },
 
 ];

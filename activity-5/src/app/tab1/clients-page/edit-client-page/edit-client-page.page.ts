@@ -13,7 +13,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class EditClientPagePage implements OnInit {
 
-  element: any
+  element: any | undefined
 
   constructor(private router: Router) { }
 
@@ -22,4 +22,5 @@ export class EditClientPagePage implements OnInit {
     console.log(routerState);
     this.element = routerState;
   }
+
 }
