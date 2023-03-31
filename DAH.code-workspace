@@ -17,10 +17,10 @@
 			"**/.eslintrc.json": true,
 			"**/capacitor.config.ts": true,
 			"**/ionic.config.json": true,
-			"**/karma.conf.js": false,
+			"**/karma.conf.js": true,
 			"**/tsconfig.app.json": true,
-			"**/tsconfig.json": true,
-			"**/tsconfig.spec.json": true,
+			"**/tsconfig.json": false,
+			"**/tsconfig.spec.json": false,
 			"**/.angular": true,
 			"**/.vscode": true
 		},

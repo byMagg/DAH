@@ -1,23 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-edit-client-page',
-  templateUrl: './edit-client-page.page.html',
-  styleUrls: ['./edit-client-page.page.scss'],
+  selector: 'app-edit-clients-page',
+  templateUrl: './edit-clients-page.page.html',
+  styleUrls: ['./edit-clients-page.page.scss'],
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule,
-  ],
+  imports: [IonicModule, CommonModule, FormsModule, RouterModule]
 })
-export class EditClientPagePage implements OnInit {
+export class EditClientsPagePage implements OnInit {
 
   element: any
 
@@ -28,5 +22,4 @@ export class EditClientPagePage implements OnInit {
     console.log(routerState);
     this.element = routerState;
   }
-
 }
