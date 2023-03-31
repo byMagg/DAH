@@ -5,13 +5,13 @@ import { IonicModule } from '@ionic/angular';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-edit-clients-page',
-  templateUrl: './edit-clients-page.page.html',
-  styleUrls: ['./edit-clients-page.page.scss'],
+  selector: 'app-edit-client-page',
+  templateUrl: './edit-client-page.page.html',
+  styleUrls: ['./edit-client-page.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, RouterModule]
 })
-export class EditClientsPagePage implements OnInit {
+export class EditClientPagePage implements OnInit {
 
   element: any
 
