@@ -20,7 +20,7 @@
 			"**/karma.conf.js": true,
 			"**/tsconfig.app.json": true,
 			"**/tsconfig.json": false,
-			"**/tsconfig.spec.json": false,
+			"**/tsconfig.spec.json": true,
 			"**/.angular": true,
 			"**/.vscode": true
 		},
