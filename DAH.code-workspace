@@ -1,7 +1,22 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "activity-0"
+		},
+		{
+			"path": "activity-1"
+		},
+		{
+			"path": "activity-2"
+		},
+		{
+			"path": "activity-3"
+		},
+		{
+			"path": "activity-4"
+		},
+		{
+			"path": "activity-5"
 		}
 	],
 	"settings": {
@@ -19,7 +34,7 @@
 			"**/ionic.config.json": true,
 			"**/karma.conf.js": true,
 			"**/tsconfig.app.json": true,
-			"**/tsconfig.json": false,
+			"**/tsconfig.json": true,
 			"**/tsconfig.spec.json": true,
 			"**/.angular": true,
 			"**/.vscode": true
