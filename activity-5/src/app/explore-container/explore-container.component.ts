@@ -14,8 +14,8 @@ import { IonicModule } from '@ionic/angular';
 })
 export class ExploreContainerComponent {
 
-  @Input() name?: string
-  @Input() buttonPath = ""
+  @Input() name: string = ""
+  @Input() buttonPath: string = ""
 
   constructor(public navCtrl: NavController) { }
 

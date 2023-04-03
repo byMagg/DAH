@@ -33,7 +33,10 @@ describe('TabsPage', () => {
     expect(component).toBeTruthy();
   });
 
-  it('initialize the component with a specific title', () => {
+  it('should initialize titles correctly', () => {
+    expect(typeof component.titleTab1).toBe("string")
+    expect(typeof component.titleTab2).toBe("string")
+    expect(typeof component.titleTab3).toBe("string")
     expect(component.titleTab1).toEqual('Clients');
     expect(component.titleTab2).toEqual('Reservations');
     expect(component.titleTab3).toEqual('Products');

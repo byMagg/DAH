@@ -23,8 +23,9 @@ describe('Tab1Page', () => {
     expect(component).toBeTruthy();
   });
 
-
-  it('initialize the component with a specific title', () => {
+  it('should initialize properties correctly', () => {
+    expect(typeof component.title).toBe("string")
+    expect(typeof component.buttonPath).toBe("string")
     expect(component.title).toEqual('Clients');
     expect(component.buttonPath).toEqual('/tabs/tab1/clients-page');
   });

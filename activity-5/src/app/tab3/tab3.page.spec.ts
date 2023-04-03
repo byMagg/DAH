@@ -21,4 +21,12 @@ describe('Tab3Page', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should initialize properties correctly', () => {
+    expect(typeof component.title).toBe("string")
+    expect(typeof component.buttonPath).toBe("string")
+    expect(component.title).toEqual('Products');
+    expect(component.buttonPath).toEqual('/tabs/tab3/products-page');
+  });
+
 });

@@ -20,4 +20,9 @@ describe('ExploreContainerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should initialize properties correctly', () => {
+    expect(typeof component.name).toBe("string")
+    expect(typeof component.buttonPath).toBe("string")
+  });
 });

@@ -22,4 +22,13 @@ describe('Tab2Page', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('should initialize properties correctly', () => {
+    expect(typeof component.title).toBe("string")
+    expect(typeof component.buttonPath).toBe("string")
+    expect(component.title).toEqual('Reservations');
+    expect(component.buttonPath).toEqual('/tabs/tab2/reservations-page');
+  });
+
 });

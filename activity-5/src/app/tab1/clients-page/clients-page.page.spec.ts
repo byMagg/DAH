@@ -20,4 +20,10 @@ describe('ClientsPagePage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should initialize properties correctly', () => {
+    expect(typeof component.buttonPath).toBe("string")
+    expect(component.buttonPath).toEqual('/tabs/tab1/clients-page/edit-client-page');
+  });
+
 });
