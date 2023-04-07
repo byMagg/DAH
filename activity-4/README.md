@@ -1,10 +1,13 @@
 # Actividad 4 - TODOS
 
 ¿Cómo se consigue que un usuario acceda solo a los productos que él ha creado?
+A la hora de obtener los productos podemos filtrar por la id del usuario ya que cada usuario tienen un documento con la lista de productos.
 
 ¿Cómo se consigue que las listas de productos se actualicen dinámicamente si se insertan nuevos registros?
+Podríamos crear un snapshot para nuestro documento de productos con doc.onSnapshot, entonces cada vez que se actualice este registro recibirá un evento.
 
 ¿Cómo se podrían crear nuevos usuarios desde nuestra aplicación Ionic sin tener que crearlos a través de la consola de Firebase?
+Deberías crear una nueva función donde llamamos a la función createUserWithEmailAndPassword (con email y password) pasandole el email y password del nuevo usuario.
 
 También se debe modificar la aplicación para cumplir con las siguientes características:
 
