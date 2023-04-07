@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "activity-5"
+		},
+		{
+			"path": ".vscode"
 		}
 	],
 	"settings": {

@@ -12,11 +12,18 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-  <h1>Aplicación de fotografía y geolocalización</h1>
-  <ion-button [routerLink]="['camera']" expand="block" fill="clear" shape="round">
-    Camera
-  </ion-button>
-  <ion-button [routerLink]="['listing']" expand="block" fill="clear" shape="round">
-    List
-  </ion-button>
+  <section>
+    <h1>Aplicación de fotografía y geolocalización</h1>
+    <div>
+      <ion-button [routerLink]="['camera']" expand="block" shape="round">
+        <ion-icon slot="start" icon="camera"></ion-icon>
+        Camera
+      </ion-button>
+      <ion-button [routerLink]="['listing']" expand="block" shape="round">
+        <ion-icon slot="start" icon="list"></ion-icon>
+
+        List
+      </ion-button>
+    </div>
+  </section>
 </ion-content>
