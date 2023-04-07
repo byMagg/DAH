@@ -9,6 +9,7 @@ export class AuthService {
 
   userData: any;
   logged: boolean = false
+
   constructor(
     public afs: AngularFirestore,
     private dbService: DbService,
@@ -23,7 +24,6 @@ export class AuthService {
         localStorage.setItem('user', '{}');
         JSON.parse(localStorage.getItem('user') || '{}');
       }
-      this.logged = this.userData != undefined
     });
   }
 
@@ -31,7 +31,10 @@ export class AuthService {
     return new Promise<any>((resolve, reject) => {
       this.afAuth.signInWithEmailAndPassword(value.email, value.password)
         .then(
-          res => resolve(res),
+          res => {
+            this.logged = true
+            resolve(res)
+          },
           err => reject(err))
     })
   }
@@ -42,6 +45,7 @@ export class AuthService {
         .then(() => {
           localStorage.removeItem('user');
           if (this.userData) this.dbService.unsubscribeOnLogOut();
+          this.logged = false
           resolve();
         }).catch((error) => {
           console.log(error);
