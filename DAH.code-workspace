@@ -20,6 +20,9 @@
 		},
 		{
 			"path": ".vscode"
+		},
+		{
+			"path": "activity-6"
 		}
 	],
 	"settings": {
