@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Fotografía y geolocalización
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,20 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Fotografía y geolocalización</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <section>
+    <h1>Aplicación de fotografía y geolocalización</h1>
+    <div>
+      <ion-button [routerLink]="['camera']" expand="block" shape="round">
+        <ion-icon slot="start" icon="camera"></ion-icon>
+        Camera
+      </ion-button>
+      <ion-button [routerLink]="['listing']" expand="block" shape="round">
+        <ion-icon slot="start" icon="list"></ion-icon>
+        List
+      </ion-button>
+    </div>
+  </section>
 </ion-content>
