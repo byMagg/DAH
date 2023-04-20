@@ -37,7 +37,6 @@ describe('ExploreContainerComponent', () => {
     expect(getComputedStyle(elMainContainer).position).toEqual("relative");
     expect(getComputedStyle(elMainContainer).height).toEqual("100%");
     expect(getComputedStyle(elMainContainer).width).toEqual("100%");
-    console.log(getComputedStyle(elContainer).top)
     expect(getComputedStyle(elContainer).position).toEqual("absolute")
     expect(getComputedStyle(elContainer).left).toEqual("0px")
     expect(getComputedStyle(elContainer).top).toEqual("50%")
