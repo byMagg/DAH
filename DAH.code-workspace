@@ -36,7 +36,7 @@
 			"**/.browserslistrc": true,
 			"**/.editorconfig": true,
 			"**/.eslintrc.json": true,
-			"**/capacitor.config.ts": true,
+			"**/capacitor.config.ts": false,
 			"**/ionic.config.json": true,
 			"**/karma.conf.js": true,
 			"**/tsconfig.app.json": true,
